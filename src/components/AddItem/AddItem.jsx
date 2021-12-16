@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 export default function AddItem({onAddItem}) {
     const [text, setText] = useState('')
 
@@ -9,7 +11,7 @@ export default function AddItem({onAddItem}) {
     return (
 <form onSubmit={handleSubmit}>
     <input 
-    placeholder='New Item'
+    placeholder='New Item' 
     value={text} onChange={(event) => setText(event.target.value)} />
     <button type='submit'>Add Item</button>
 </form>
